@@ -1,0 +1,33 @@
+<h3>
+    Task List
+</h3>
+<div *ngFor = "let task of allTasks">
+    <div class="title">
+        {{task.title}}
+    </div>
+    <div>
+        <form class="" action="" (submit) = "taskInfo($event)" >
+            <input id="title" type="hidden" value="{{task.title}}">
+            <button type="submit" class="showInfo">
+                Show more
+            </button>
+        </form>
+        
+        <form class="" action="" (submit) = "deleteTask($event)" >
+            <input id="title" type="hidden" value="{{task.title}}">
+            <button type="submit" class="">
+                Delete
+            </button>
+        </form>
+    </div>
+    
+</div>
+</div>
+<div *ngIf="task2.title">
+<h3>
+    Task Info
+</h3>
+<app-usergui [task2] = "task2"></app-usergui>
+
+
+
